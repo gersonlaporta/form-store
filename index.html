@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
+    <title>Form Open Tiendas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a13b2b48bb.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Aquí empieza el header -->
+      <header>
+          <a href="index.html"><img src="img/logo_OpenTiendas.png" alt="Logo de Open Tiendas" id="logo"></a>
+      </header>
+
+      <div class="main">
+
+        <section id="section1"></section>
+
+        <section id="section2">
+        
+          <div class="container">
+            
+            <form method="POST" action="http://date.jsontest.com/" name="contact" id="contact" class="form" autocomplete="off">
+              <div id="resultado"></div>
+              <div id="desaparece">
+                  <h2 class="h2">Envíanos tu mensaje</h2>
+                  <hr>
+                  <div class="form-container">
+                    <div class="message">
+                        <label class="textarea" for="observaciones">Observaciones <span>*</span></label>
+                          <textarea name="observaciones" id="textarea" rows="10" cols="30" required></textarea>
+                    </div>
+                    <div class="contact">
+                        <label for="name" class="label-text">Nombre<span>*</span>
+                          <input type="text" id="name" name="firstname" minlength="2" class="input" required pattern="[A-Za-z0-9]{2,40}" />
+                        </label>
+                        <label for="email" class="label-text">E-mail <span>*</span>
+                          <input type="email" id="email" name="email" class="input" required />
+                        </label>
+                        <label for="phone" class="label-text">Teléfono
+                          <input type="tel" name="phone" class="input" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" />
+                        </label>
+                    </div>
+                  </div>
+              </div>
+              <div class="row">
+                  <button type="submit" name="send" id="cargar" class="enviar"><i class="fas fa-paper-plane"></i>Enviar</button>
+              </div>
+            </form>
+          </div>
+
+        </section>
+
+        <section id="section3"></section>
+
+      </div>
+
+      <script src="js/main.js"></script>
+
+
+  </body>
+
+</html>
